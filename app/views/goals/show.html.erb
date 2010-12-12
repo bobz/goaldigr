@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @goal.category %>
+</p>
+
+<p>
+  <b>Short desc:</b>
+  <%= @goal.short_desc %>
+</p>
+
+<p>
+  <b>Long desc:</b>
+  <%= @goal.long_desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  category: MyString
+  short_desc: MyString
+  long_desc: MyText
+
+two:
+  category: MyString
+  short_desc: MyString
+  long_desc: MyText
