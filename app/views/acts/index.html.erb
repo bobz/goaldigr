@@ -1,0 +1,23 @@
+<h1>Listing acts</h1>
+
+<table>
+  <tr>
+    <th>Mission</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @acts.each do |act| %>
+  <tr>
+    <td><%= act.mission_id %></td>
+    <td><%= link_to 'Show', act %></td>
+    <td><%= link_to 'Edit', edit_act_path(act) %></td>
+    <td><%= link_to 'Destroy', act, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Act', new_act_path %>

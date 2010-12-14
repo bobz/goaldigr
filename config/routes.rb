@@ -1,4 +1,8 @@
 Goaldigr::Application.routes.draw do
+  resources :acts
+
+  resources :missions
+
   resources :goals
 
   # The priority is based upon order of creation:
