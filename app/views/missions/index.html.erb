@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>goal_id</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +10,7 @@
 
 <% @missions.each do |mission| %>
   <tr>
+    <td><%= mission.goal_id %></td> 
     <td><%= link_to 'Show', mission %></td>
     <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
     <td><%= link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -3,14 +3,12 @@
 
 <table>
   <tr>
-    <th>Category</th>
     <th>Description</th>
     <th></th>
   </tr>
 
 <% @goals.each do |goal| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= goal.category %></td>
     <td class="list_description">
 	  <dl>
 	    <dt><%= goal.short_desc %></dt>

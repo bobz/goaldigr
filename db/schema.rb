@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101213061044) do
+ActiveRecord::Schema.define(:version => 20101217041037) do
 
   create_table "acts", :force => true do |t|
     t.integer  "mission_id"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20101213061044) do
   end
 
   create_table "goals", :force => true do |t|
-    t.string   "category"
     t.string   "short_desc"
     t.text     "long_desc"
     t.datetime "created_at"
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20101213061044) do
   create_table "missions", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "goal_id"
   end
 
 end
