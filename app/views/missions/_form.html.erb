@@ -15,10 +15,22 @@
 	<%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :description %><br />
+	<%= f.text_field :description %>
+  </div>
+  <div class="field">
     <%= f.label :goal_id %><br />
 	<%= f.text_field :goal_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+  <div>
+    <table>
+	  <tr><th>ID</th><th>Goal</th></tr>
+    <% @goals.each do |goal| %>
+      <tr><td><%= goal.id %></td><td><%= goal.short_desc %></td></tr>	
+    <% end %>
+    </table>
   </div>
 <% end %>

@@ -25,6 +25,7 @@ class MissionsController < ApplicationController
   # GET /missions/new.xml
   def new
     @mission = Mission.new
+	@goals = Goal.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class MissionsController < ApplicationController
   # GET /missions/1/edit
   def edit
     @mission = Mission.find(params[:id])
+	@goals = Goal.all
   end
 
   # POST /missions
