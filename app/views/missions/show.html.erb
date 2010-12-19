@@ -8,6 +8,12 @@
   <b>goal id:</b>
   <%= @mission.goal_id %>
 </p>
-
+<p>
+  <b>Acts:</b>
+  <%= @mission.acts.count %>
+  <%= if !@mission.acts.count.zero?
+		"(" + @mission.acts.last.updated_at.to_s(:rfc822) + ")"
+	  end %> 
+</p>
 <%= link_to 'Edit', edit_mission_path(@mission) %> |
 <%= link_to 'Back', missions_path %>
