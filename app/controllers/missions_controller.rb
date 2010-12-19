@@ -80,4 +80,18 @@ class MissionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # def add_act
+	# Act.create :mission_id => :id
+  # end
+
+  # def remove_act
+    # @mission = Mission.find(params[:id])
+	# @mission.acts.last.destroy
+ 
+    # respond_to do |format|
+      # format.html # index.html.erb
+      # format.xml  { render :xml => @missions }
+    # end
+  # end
 end

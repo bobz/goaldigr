@@ -1,24 +1,38 @@
+<div id="product_list">
 <h1>Listing missions</h1>
 
 <table>
   <tr>
+    <th>Goal</th>
 	<th>Title</th>
-    <th>goal_id</th>
-    <th></th>
-    <th></th>
+	<th>Acts</th>
+	<th>Day</th>
+    <th>Week</th>
+    <th>Month</th>
+    <th>Total</th>
     <th></th>
   </tr>
 
 <% @missions.each do |mission| %>
-  <tr>
-    <td><%= mission.title %></td> 
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= mission.goal_id %></td> 
-    <td><%= link_to 'Show', mission %></td>
-    <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-    <td><%= link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= mission.title %></td> 
+	<td><%= link_to '+', new_act_path %> <br />
+	    <%= link_to '-', mission.acts.last, :method => :delete %>
+    </td>
+	<td>-</td>
+	<td>-</td>
+	<td>-</td>
+	<td><%= mission.acts.count %></td>
+    <td class="list_actions">
+	  <%= link_to 'Show', mission %></br>
+      <%= link_to 'Edit', edit_mission_path(mission) %></br>
+      <%= link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
   </tr>
 <% end %>
 </table>
+</div>
 
 <br />
 
