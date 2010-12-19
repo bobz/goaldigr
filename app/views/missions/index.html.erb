@@ -18,7 +18,7 @@
     <td><%= if mission.goal then mission.goal.short_desc end %></td> 
     <td class="list_description">
 	  <dl>
-	    <dt><%= mission.title %></dt>
+	    <dt><%= link_to mission.title, mission %></dt>
 		<dd><%= truncate(strip_tags(mission.description), :length => 80) %></dd>
       </dl>
 	<td>
@@ -31,7 +31,6 @@
 	<td>-</td>
 	<td><%= mission.acts.count %></td>
     <td class="list_actions">
-	  <%= link_to 'Show', mission %></br>
       <%= link_to 'Edit', edit_mission_path(mission) %></br>
       <%= link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete %>
 	</td>

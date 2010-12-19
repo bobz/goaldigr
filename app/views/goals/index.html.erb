@@ -11,12 +11,11 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td class="list_description">
 	  <dl>
-	    <dt><%= goal.short_desc %></dt>
+	    <dt><%= link_to goal.short_desc, goal %></dt>
 	    <dd><%= truncate(strip_tags(goal.long_desc), :length => 80) %></dd>
 	  </dl>
 	</td>
     <td class="list_actions">
-	  <%= link_to 'Show', goal %></br>
       <%= link_to 'Edit', edit_goal_path(goal) %></br>
       <%= link_to 'Destroy', goal, :confirm => 'Are you sure?', :method => :delete %>
 	</td>
