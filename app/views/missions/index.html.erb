@@ -4,7 +4,7 @@
 <table>
   <tr>
     <th>Goal</th>
-	<th>Title</th>
+	<th>Description</th>
 	<th>Acts</th>
 	<th>Day</th>
     <th>Week</th>
@@ -15,8 +15,13 @@
 
 <% @missions.each do |mission| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= mission.goal_id %></td> 
-    <td><%= mission.title %></td> 
+    <td><%= if mission.goal then mission.goal.short_desc end %></td> 
+    <td class="list_description">
+	  <dl>
+	    <dt><%= mission.title %></dt>
+		<dd><%= truncate(strip_tags(mission.description), :length => 80) %></dd>
+      </dl>
+	<td>
 	<td>
 	    <%= link_to '+', acts_path(:mission_id => mission), :method => :post %> <br />
 	    <%= link_to '-', mission.acts.last, :method => :delete %>
