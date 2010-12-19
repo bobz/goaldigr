@@ -17,7 +17,8 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= mission.goal_id %></td> 
     <td><%= mission.title %></td> 
-	<td><%= link_to '+', new_act_path %> <br />
+	<td>
+	    <%= link_to '+', acts_path(:mission_id => mission), :method => :post %> <br />
 	    <%= link_to '-', mission.acts.last, :method => :delete %>
     </td>
 	<td>-</td>

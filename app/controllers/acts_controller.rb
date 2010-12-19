@@ -40,11 +40,12 @@ class ActsController < ApplicationController
   # POST /acts
   # POST /acts.xml
   def create
-    @act = Act.new(params[:act])
+    mission = Mission.find(params[:mission_id])
+    @act = mission.acts.build
 
     respond_to do |format|
       if @act.save
-        format.html { redirect_to(@act, :notice => 'Act was successfully created.') }
+        format.html { redirect_to(missions_path, :notice => 'Act was successfully created.') }
         format.xml  { render :xml => @act, :status => :created, :location => @act }
       else
         format.html { render :action => "new" }
@@ -76,7 +77,7 @@ class ActsController < ApplicationController
     @act.destroy
 
     respond_to do |format|
-      format.html { redirect_to(acts_url) }
+      format.html { redirect_to(missions_path) }
       format.xml  { head :ok }
     end
   end
