@@ -1,5 +1,6 @@
 <div id="product_list">
 <h1>Listing missions</h1>
+<h2><%= link_to 'See goals', goals_path %></h2>
 
 <table>
   <tr>
@@ -15,7 +16,7 @@
 
 <% @missions.each do |mission| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= if mission.goal then mission.goal.short_desc end %></td> 
+    <td><%= if mission.goal then link_to mission.goal.short_desc, mission.goal end %></td> 
     <td class="list_description">
 	  <dl>
 	    <dt><%= link_to mission.title, mission %></dt>
