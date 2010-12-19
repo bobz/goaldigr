@@ -22,7 +22,7 @@
 	    <dt><%= link_to mission.title, mission %></dt>
 		<dd><%= truncate(strip_tags(mission.description), :length => 80) %></dd>
       </dl>
-	<td>
+	</td>
 	<td>
 	    <%= link_to '+', acts_path(:mission_id => mission), :method => :post %> <br />
 	    <%= link_to '-', mission.acts.last, :method => :delete %>
