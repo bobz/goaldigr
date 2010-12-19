@@ -10,7 +10,6 @@
 Goal.delete_all
 # . . .
 Goal.create(
-  :category => 'Coding',
   :short_desc => 'Work on GoalDigr',
   :long_desc => 
     %{<p>
@@ -18,7 +17,6 @@ Goal.create(
 	  </p>})
 # . . .
 Goal.create(
-  :category => 'Fitness',
   :short_desc => 'Pushups',
   :long_desc => 
     %{<p>
@@ -26,7 +24,6 @@ Goal.create(
 	  </p>})
 # . . .
 Goal.create(
-  :category => 'Fitness',
   :short_desc => 'Yoga or Kickboxing',
   :long_desc => 
     %{<p>

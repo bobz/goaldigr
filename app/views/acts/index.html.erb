@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th>Title</th>
     <th>Mission</th>
     <th></th>
     <th></th>
@@ -10,6 +11,7 @@
 
 <% @acts.each do |act| %>
   <tr>
+	<td><%= act.title %></td>
     <td><%= act.mission_id %></td>
     <td><%= link_to 'Show', act %></td>
     <td><%= link_to 'Edit', edit_act_path(act) %></td>
