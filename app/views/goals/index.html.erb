@@ -1,5 +1,6 @@
 <div id="product_list">
 <h1>Listing goals</h1>
+<h2><%= link_to 'see missions', missions_path %></h2>
 
 <table>
   <tr>
@@ -11,8 +12,8 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td class="list_description">
 	  <dl>
-	    <dt><%= link_to goal.short_desc, goal %></dt>
-	    <dd><%= truncate(strip_tags(goal.long_desc), :length => 80) %></dd>
+	    <dt><%= link_to goal.title, goal %></dt>
+	    <dd><%= truncate(strip_tags(goal.description), :length => 80) %></dd>
 	  </dl>
 	</td>
     <td class="list_actions">

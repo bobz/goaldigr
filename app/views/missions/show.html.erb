@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>title:</b>
+  <b>Title:</b>
   <%= @mission.title %>
 </p>
 <p>
-  <b>description:</b>
+  <b>Description:</b>
   <%= @mission.description %>
 </p>
 <p>
-  <b>goal id:</b>
-  <%= @mission.goal_id %>
+  <b>Goal:</b>
+  <%= if(@mission.goal_id) then @mission.goal.title end %>
 </p>
 <p>
   <b>Acts:</b>

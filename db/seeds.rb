@@ -7,26 +7,56 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 # encoding: utf-8
+Act.delete_all
+Mission.delete_all
 Goal.delete_all
 # . . .
-Goal.create(
-  :short_desc => 'Work on GoalDigr',
-  :long_desc => 
-    %{<p>
-     Spend an hour coding on GoalDigr without interuption.
-	  </p>})
+goal = Goal.create(
+  :title => 'Fitness',
+  :description => 
+    %{Maintain a high level of fitness.})
+mission = Mission.create(
+  :title => 'Pushups',
+  :description => %{Do 10 pushups},
+  :goal_id => goal.id)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 10.day)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 1.day)
+mission = Mission.create(
+  :title => 'Situps',
+  :description => %{Do 50 situps},
+  :goal_id => goal.id)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 100.day)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 6.day)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now )
 # . . .
-Goal.create(
-  :short_desc => 'Pushups',
-  :long_desc => 
-    %{<p>
-     Do some pushups.
-	  </p>})
+goal = Goal.create(
+  :title => 'Hygene',
+  :description => 
+    %{Keep myself and my surroundings clean.})
+mission = Mission.create(
+  :title => 'Shower',
+  :description => %{Take a shower},
+  :goal_id => goal.id)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 1.day)
+mission = Mission.create(
+  :title => 'Brush teeth',
+  :description => %{Brush your teeth (for two minutes!)},
+  :goal_id => goal.id)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 5.day)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 1.day)
 # . . .
-Goal.create(
-  :short_desc => 'Yoga or Kickboxing',
-  :long_desc => 
-    %{<p>
-	  Attend a yoga or kickboxing class.
-	  </p>})
-# . . .
+goal = Goal.create(
+  :title => 'Dating',
+  :description => 
+    %{Find myself a pretty girl.})
+mission = Mission.create(
+  :title => 'Ask for it!',
+  :description => %{Ask a new girl on a date.},
+  :goal_id => goal.id)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 100.day)
+Act.create(:mission_id => mission.id, :created_at => Time.zone.now - 10.day)
+mission = Mission.create(
+  :title => 'Go for it!',
+  :description => %{Go on a date with a girl I like.},
+  :goal_id => goal.id)
+
