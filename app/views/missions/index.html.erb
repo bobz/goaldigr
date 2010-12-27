@@ -1,6 +1,6 @@
 <div id="product_list">
-<h1>Listing missions</h1>
-<h2><%= link_to 'See goals', goals_path %></h2>
+<h1>Listing <i>Missions</i></h1>
+<h2>=====&raquo; <%= link_to 'See goals', goals_path %> &laquo;=====</h2>
 
 <table>
   <tr>
@@ -20,7 +20,7 @@
     <td class="list_description">
 	  <dl>
 	    <dt><%= link_to mission.title, mission %></dt>
-		<dd><%= truncate(strip_tags(mission.description), :length => 80) %></dd>
+		<dd><%= truncate(strip_tags(mission.description), :length => 800) %></dd>
       </dl>
 	</td>
 	<td>
