@@ -1,4 +1,5 @@
 class Goal < ActiveRecord::Base
+  belongs_to :user
   has_many :missions
   
   before_destroy :ensure_not_referenced_by_any_mission

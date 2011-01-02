@@ -13,6 +13,7 @@ class MissionsController < ApplicationController
 
   # GET /missions/1
   # GET /missions/1.xml
+  before_filter :authenticate
   def show
     @mission = Mission.find(params[:id])
 
@@ -35,6 +36,7 @@ class MissionsController < ApplicationController
   end
 
   # GET /missions/1/edit
+  before_filter :authenticate
   def edit
     @mission = Mission.find(params[:id])
 	@goals = Goal.all
@@ -58,6 +60,7 @@ class MissionsController < ApplicationController
 
   # PUT /missions/1
   # PUT /missions/1.xml
+  before_filter :authenticate
   def update
     @mission = Mission.find(params[:id])
 
@@ -74,6 +77,7 @@ class MissionsController < ApplicationController
 
   # DELETE /missions/1
   # DELETE /missions/1.xml
+  before_filter :authenticate
   def destroy
     @mission = Mission.find(params[:id])
     @mission.destroy
