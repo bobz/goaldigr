@@ -1,6 +1,9 @@
 <div id="product_list">
 <h1>Listing <i>Missions</i></h1>
+<h2>  for <%= current_user.email %> (<%= link_to 'sign out', session_path, :method => :delete %>)</h2>
+<br />
 <h2>=====&raquo; <%= link_to 'See goals', goals_path %> &laquo;=====</h2>
+<br />
 
 <table>
   <tr>
