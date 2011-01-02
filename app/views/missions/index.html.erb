@@ -10,17 +10,17 @@
     <th>Goal</th>
 	<th>Description</th>
 	<th>Acts</th>
-	<th>Day</th>
-    <th>Week</th>
-    <th>Month</th>
-    <th>Total</th>
+	<th></th>
+    <th></th>
+    <th></th>
+    <th></th>
     <th></th>
   </tr>
 
 <% @goals.each do |goal| %>
   <tr class=list_line_goal>
     <td><%= link_to goal.title, goal %></td> 
-	<td /><td /><td /><td /><td /><td /><td />
+	<td /><td /><td>Day</td><td>Week</td><td>Month</td><td>Total</td><td />
   </tr>
   <% goal.missions.each do |mission| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
