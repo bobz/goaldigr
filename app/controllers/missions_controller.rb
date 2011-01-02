@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.xml
+  before_filter :authenticate
   def index
     @missions = Mission.all
 
