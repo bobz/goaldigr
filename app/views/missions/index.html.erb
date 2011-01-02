@@ -14,9 +14,14 @@
     <th></th>
   </tr>
 
-<% @missions.each do |mission| %>
+<% @goals.each do |goal| %>
+  <tr class=list_line_goal>
+    <td><%= link_to goal.title, goal %></td> 
+	<td /><td /><td /><td /><td /><td /><td />
+  </tr>
+  <% goal.missions.each do |mission| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= if mission.goal then link_to mission.goal.title, mission.goal end %></td> 
+    <td />
     <td class="list_description">
 	  <dl>
 	    <dt><%= link_to mission.title, mission %></dt>
@@ -36,6 +41,7 @@
       <%= link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete %>
 	</td>
   </tr>
+  <% end %>
 <% end %>
 </table>
 </div>

@@ -56,6 +56,12 @@
   padding-left: 1em;
 }
 
+#product_list .list_line_goal {
+  background:   #cccccc;
+  font-weight:  bold;
+  font-size:    larger;
+}
+
 #product_list .list_line_even {
   background:   #e0f8f8;
 }

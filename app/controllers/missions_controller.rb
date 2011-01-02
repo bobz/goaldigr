@@ -3,7 +3,8 @@ class MissionsController < ApplicationController
   # GET /missions.xml
   before_filter :authenticate
   def index
-    @missions = Mission.all
+    # @missions = Mission.all
+    @goals = current_user.goals.all
 
     respond_to do |format|
       format.html # index.html.erb
