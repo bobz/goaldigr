@@ -12,6 +12,12 @@ class AddUserToGoal < ActiveRecord::Migration
 	puts "Migration User: #{user.email}  ##{user.id}"
 
     add_column :goals, :user_id, :integer, :default => user.id
+	
+	Goal.where(:user_id => nil).each do |goal|
+	  goal.user_id = user.id
+      goal.save
+	end
+
   end
 
   def self.down
