@@ -3,7 +3,7 @@ class GoalsController < ApplicationController
   # GET /goals.xml
   before_filter :authenticate
   def index
-    @goals = Goal.all
+    @goals = current_user.goals.all
 
     respond_to do |format|
       format.html # index.html.erb
