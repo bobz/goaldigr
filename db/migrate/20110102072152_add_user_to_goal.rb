@@ -5,7 +5,12 @@ class AddUserToGoal < ActiveRecord::Migration
 	then
 	  user = ::User.new(:email => "bobz@bobz.in", :password => "tmp123", :password_confirmation => "tmp123")
 	  user.save
+	  
+	  puts "Created new user"
     end
+
+	puts "Migration User: #{user.email}  ##{user.id}"
+
     add_column :goals, :user_id, :integer, :default => user.id
   end
 
