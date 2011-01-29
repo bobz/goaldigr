@@ -1,7 +1,9 @@
 class GoalsController < ApplicationController
+  before_filter :authenticate
+  layout "main"
+
   # GET /goals
   # GET /goals.xml
-  before_filter :authenticate
   def index
     @goals = current_user.goals.all
 

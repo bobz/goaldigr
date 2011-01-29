@@ -2,6 +2,8 @@ class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.xml
   before_filter :authenticate
+  layout "main"
+
   def index
     # @missions = Mission.all
     @goals = current_user.goals.all

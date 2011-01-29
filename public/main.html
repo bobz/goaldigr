@@ -1,0 +1,187 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!--
+	Description:
+	- This is an open source web app HTML + CSS template that looks slightly Googl-y. 
+	- It's very simple: no images, no javscript, very simple CSS. 
+	- It's a starting point, not a destination. 
+	- Just enough to start using, nothing to throw away.
+	
+	License: 
+	- whatever license is more open and legal, including commercial use.
+	
+	Author:
+	- first version Dec 2010 by http://petervandijck.com
+	
+	Note: For overal layout, we use YUI Grids http://developer.yahoo.com/yui/grids/
+	
+	To Do:
+	- Make sure the main content space fills out vertically until the bottom of the screen.
+	- Improve naming.
+	- Make list of items a <ol> or <ul>. Keep the lists simple, nothing fancy.
+	- Add bits and pieces.
+	- Make menu a little nicer with hover states perhaps.
+	- Better comments.
+	
+	Tested on:
+	- Google Chrome 9.0 beta (Windows 7)
+	
+	Do NOT add:
+	- Images.
+	- Javascript.
+	- CSS for forms.
+	- Fancy lists of items.
+	- It's not meant to be finished, it's meant to be an easy starting point. Keep it simple.
+	
+	Share and enjoy!
+-->
+<head>
+   <title>My app</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/base/base-min.css">
+   <style type="text/css">
+		<!--
+		/* Left hand menu. */
+			.left-hand-menu_active {
+				background:#6bf;
+			}
+			.left-hand-menu_unread {
+				font-weight: bold;
+			}
+			.left-hand-menu p {
+				padding: 0.3em;
+				margin: 0em;
+				width:190px;
+			}
+
+		/* Align left and right */
+			.alignleft { float: left; }
+			.alignright { float: right; }   
+
+		/* Overall layout and stuff */
+			/* This height-adjusting still doesn't really totally work...  */
+			html, body, #doc3, #bd, #yui-main, .yui-b, .yui-g { height:100%; }
+			
+			.main_content {
+				border-style:solid;
+				border-width:3px;
+				border-color:#6bf;
+				padding: 1em;
+				-webkit-border-radius:3px;
+				min-height:85%;
+				
+			}
+			.theheader {
+				padding-top:1em;
+				padding-bottom:2em;
+			}
+			.servicetitle {
+				font-size:1.5em;
+				font-weight: bold;
+			}
+			
+		/* Types of links */
+			.link_button {
+				font-weight: bold;
+				padding: 4px;
+				background:#9df;
+				-webkit-border-radius:3px;
+				padding-left:10px;
+				padding-right:10px;
+			}
+		/* Lists of stuff */
+			.itemlist li {
+				list-style-type: none;
+				border-bottom:1px solid #ddd;
+				padding-bottom: 5px;
+			}
+		
+		/* Misc */
+			.message_confirmation {
+				background:#9f9;
+				padding:.5em;
+			}
+			.message_error {
+				background:#f99;
+				padding:.5em;
+			}
+			.message_bottomtip {
+				background:#FFF68F;
+				padding:.5em;
+				margin:0px;
+				
+				position:fixed;
+				bottom:0px;
+				left: 30%;
+			}
+		-->
+	</style>
+</head>
+<body>
+			
+			
+<div id="doc3" class="yui-t2">
+	<div id="hd">
+		<p class="theheader">
+			<span class="alignleft"><span class="servicetitle">App title.</span> App tagline can be long or not so long.</span>
+			<span class="alignright">Username | <a href="">My account</a> | <a href="">Sign out</a></span>
+						
+		</p>
+	</div>
+	<div id="bd">
+			
+			<div id="yui-main">
+				<div class="yui-b">
+					<div class="yui-g">
+						<div class="main_content">
+							
+							<p><strong>Title of this list:</strong></p>
+							
+							<ul class="itemlist">
+								<li><a href="">Some item goes here</a> some stuff</li>
+								<li><a href="">Some item goes here</a> some other stuff</li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+								<li><a href="">Some item goes here</a></li>
+							</ul>
+							<p class="message_confirmation">✔ Your changes are saved.</p>
+							<p class="message_error">✖ See comments in the source.</p>
+							
+							<p>All | <a href="">Old</a> | <a href="">New</a></p>
+							<p><a href="" class="link_button">Create new item</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="yui-b left-hand-menu">
+					<p>&nbsp;</p>
+					<p class="left-hand-menu_active left-hand-menu_unread"><a href="">First menu item</a> (5)</p>
+					<p class="left-hand-menu_unread"><a href="">Another menu item</a> (11)</p>
+					<p><a href="">Another one</a> (3)</p>
+					<p>&nbsp;</p>
+					<p><a href="">Yet another one</a></p>
+					<p><a href="">It keeps coming</a></p>
+					<p>&nbsp;</p>
+					<p><a href="">Some more stuff</a></p>
+					<p><a href="">And even more</a></p>
+					<hr>
+					<p><a href="">And more still</a></p>
+			</div>
+		
+	</div>
+	<div id="ft">
+		<p align="center">Footer here.</p>
+	</div>
+</div>
+
+<p class="message_bottomtip"><strong>Tip:</strong> there are new comments. <a href="">Reload page</a></p>
+
+
+
+</body>
+</html>
