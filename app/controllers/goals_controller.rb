@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
-  before_filter :authenticate
-  layout "main"
+#  layout "main"
 
+  before_filter :authenticate
   # GET /goals
   # GET /goals.xml
   def index
