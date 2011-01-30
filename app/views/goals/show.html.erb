@@ -10,10 +10,9 @@
   <%= @goal.description %>
 </p>
 
-<p>
-  <b>User: </b>
-  <%= if (@goal.user_id) then @goal.user.email end %>
-</p>
-
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', goals_path %>
+
+<table>
+  <%= render @goal.missions %>
+</table>
