@@ -50,8 +50,9 @@
 	<div id="hd">
 		<p class="theheader">
 			<span class="alignleft"><span class="servicetitle">GoalDigr</span> Delete Facebook.  Meet Winners.</span>
-			<span class="alignright"><strong><%= current_user.email %></strong> | <a href="">My account</a> | <%= link_to 'Sign out', session_path, :method => :delete %>
-						
+			<% if @username then %>
+			<span class="alignright"><strong><%= @username %></strong> | <a href="">My account</a> | <%= link_to 'Sign out', session_path, :method => :delete %>
+			<% end %>
 		</p>
 	</div>
 	<div id="bd">
@@ -70,12 +71,11 @@
 					<p class="left-hand-menu_unread"><%= link_to 'Missions', missions_path %></p>
 					<p class="left-hand-menu_unread"><%= link_to 'Goals', goals_path %></p>
 					<ul>
-					<% @goals.each do |goal| %>
+					<% if @nav_goals then @nav_goals.each do |goal| %>
 					<li><%= link_to goal.title, goal %></li>
-					<% end %>
+					<% end end %>
 					</ul>
 			</div>
-		
 	</div>
 	<div id="ft">
 		<p align="center">Footer here.</p>

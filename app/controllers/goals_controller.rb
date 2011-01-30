@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 #  layout "main"
 
-  before_filter :authenticate
+#  before_filter :authenticate
   # GET /goals
   # GET /goals.xml
   def index
@@ -15,7 +15,6 @@ class GoalsController < ApplicationController
 
   # GET /goals/1
   # GET /goals/1.xml
-  before_filter :authenticate
   def show
     @goal = Goal.find(params[:id])
 
@@ -27,7 +26,6 @@ class GoalsController < ApplicationController
 
   # GET /goals/new
   # GET /goals/new.xml
-  before_filter :authenticate
   def new
     @goal = Goal.new
 	@users = ::User.all
@@ -39,7 +37,6 @@ class GoalsController < ApplicationController
   end
 
   # GET /goals/1/edit
-  before_filter :authenticate
   def edit
     @goal = Goal.find(params[:id])
 	@users = ::User.all
@@ -47,7 +44,6 @@ class GoalsController < ApplicationController
 
   # POST /goals
   # POST /goals.xml
-  before_filter :authenticate
   def create
     @goal = Goal.new(params[:goal])
 
@@ -64,7 +60,6 @@ class GoalsController < ApplicationController
 
   # PUT /goals/1
   # PUT /goals/1.xml
-  before_filter :authenticate
   def update
     @goal = Goal.find(params[:id])
 
@@ -81,7 +76,6 @@ class GoalsController < ApplicationController
 
   # DELETE /goals/1
   # DELETE /goals/1.xml
-  before_filter :authenticate
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
