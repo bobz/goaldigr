@@ -1,38 +1,6 @@
-<%= form_for(@mission) do |f| %>
-  <% if @mission.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@mission.errors.count, "error") %> prohibited this mission from being saved:</h2>
-
-      <ul>
-      <% @mission.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :title %><br />
-	<%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-	<%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :goal_id %><br />
-	<%= f.text_field :goal_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <div>
-    For the "Goal" field above, please select a Goal <b>ID</b> from the below table:<br />
-	<i>(This horrible hack will be corrected ASAP)</i>
-    <table>
-	  <tr><th>ID</th><th>Goal</th></tr>
-    <% @goals.each do |goal| %>
-      <tr><td><%= goal.id %></td><td><%= goal.title %></td></tr>	
-    <% end %>
-    </table>
-  </div>
+<%= semantic_form_for(@mission) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :goal %>
+  <%= f.buttons %>
 <% end %>

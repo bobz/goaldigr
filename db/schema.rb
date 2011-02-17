@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20110102072152) do
     t.datetime "updated_at"
     t.string   "title"
     t.text     "description"
-    t.integer  "user_id",     :default => 4
+    t.integer  "user_id",     :default => 1
   end
 
   create_table "missions", :force => true do |t|

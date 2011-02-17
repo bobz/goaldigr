@@ -32,3 +32,5 @@ gem "clearance", "~> 0.9"
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'formtastic'

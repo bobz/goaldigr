@@ -34,6 +34,10 @@ GEM
       rails (~> 3.0.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    formtastic (1.2.2)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (>= 0.4.0)
     i18n (0.5.0)
     mail (2.2.12)
       activesupport (>= 2.3.6)
@@ -72,5 +76,6 @@ PLATFORMS
 
 DEPENDENCIES
   clearance (~> 0.9)
+  formtastic
   rails (= 3.0.3)
   sqlite3-ruby
