@@ -93,3 +93,16 @@ html, body, #doc3, #bd, #yui-main, .yui-b, .yui-g { height:100%; }
 	bottom:0px;
 	left: 30%;
 }
+
+/* formtastic */
+.formtastic li {
+  list-style: none outside none;
+}
+
+.formtastic label {
+  display: block;
+}
+
+.formtastic ol {
+  margin: 1em 0 0 0;
+}
