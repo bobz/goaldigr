@@ -33,5 +33,6 @@ gem "clearance", "~> 0.9"
 #   gem 'webrat'
 # end
 
-gem 'formtastic'
-gem 'haml'
+gem 'formtastic' # makes forms easier (semantic_form_for)
+gem 'haml' # ERB alternative
+gem 'inherited_resources' # simplifies RESTful controllers
