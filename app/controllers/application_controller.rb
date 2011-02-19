@@ -6,13 +6,11 @@ class ApplicationController < ActionController::Base
   before_filter :init
 
   def init
-  @nav_goals = ()
-  @username = nil
-  if (current_user)
-  then
-    @nav_goals = current_user.goals
-    @username = current_user.email
+    @nav_goals = ()
+    @username = nil
+    if (current_user)
+      @nav_goals = current_user.goals
+      @username = current_user.email
+    end
   end
-  end
-
 end
