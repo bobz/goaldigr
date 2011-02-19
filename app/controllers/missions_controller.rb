@@ -7,11 +7,6 @@ class MissionsController < ApplicationController
   def index
     # @missions = Mission.all
     @goals = current_user.goals.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @missions }
-    end
   end
 
   # GET /missions/1
