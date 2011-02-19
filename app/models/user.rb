@@ -37,4 +37,8 @@ class User < ActiveRecord::Base
 						})
     mission.save
   end
+
+  def to_s
+    email
+  end
 end
