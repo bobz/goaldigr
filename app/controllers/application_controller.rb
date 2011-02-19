@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Clearance::Authentication
+  inherit_resources
   protect_from_forgery
 
   before_filter :authenticate
