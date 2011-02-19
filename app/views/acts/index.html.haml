@@ -1,0 +1,19 @@
+%h1 Listing acts
+%table
+  %tr
+    %th Title
+    %th Mission
+    %th CreatedAt
+    %th
+    %th
+    %th
+  - @acts.each do |act|
+    %tr
+      %td= act.title
+      %td= if (act.mission_id) then Mission.find(act.mission_id).title end
+      %td= act.created_at.to_s(:rfc822)
+      %td= link_to 'Show', act
+      %td= link_to 'Edit', edit_act_path(act)
+      %td= link_to 'Destroy', act, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Act', new_act_path

@@ -34,3 +34,4 @@ gem "clearance", "~> 0.9"
 # end
 
 gem 'formtastic'
+gem 'haml'

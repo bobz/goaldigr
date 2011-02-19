@@ -1,0 +1,75 @@
+!!! Strict
+%html
+  /
+    Description:
+    \- This is an open source web app HTML + CSS template that looks slightly Googl-y.
+    \- It's very simple: no images, no javscript, very simple CSS.
+    \- It's a starting point, not a destination.
+    \- Just enough to start using, nothing to throw away.
+    
+    License:
+    \- whatever license is more open and legal, including commercial use.
+    
+    Author:
+    \- first version Dec 2010 by http://petervandijck.com
+    
+    Note: For overal layout, we use YUI Grids http://developer.yahoo.com/yui/grids/
+    
+    To Do:
+    \- Make sure the main content space fills out vertically until the bottom of the screen.
+    \- Improve naming.
+    \- Make list of items a <ol> or <ul>. Keep the lists simple, nothing fancy.
+    \- Add bits and pieces.
+    \- Make menu a little nicer with hover states perhaps.
+    \- Better comments.
+    
+    Tested on:
+    \- Google Chrome 9.0 beta (Windows 7)
+    
+    Do NOT add:
+    \- Images.
+    \- Javascript.
+    \- CSS for forms.
+    \- Fancy lists of items.
+    \- It's not meant to be finished, it's meant to be an easy starting point. Keep it simple.
+    
+    Share and enjoy!
+  %head
+    %title GoalDigr : Delete Facebook.  Meet Winners.
+    %link{:href => "http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://yui.yahooapis.com/2.8.2r1/build/base/base-min.css", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    #doc3.yui-t2
+      #hd
+        %p.theheader
+          %span.alignleft
+            %span.servicetitle.g
+              G
+              %span.o> o
+              al
+              %span.d Digr
+            %span.d Delete Facebook.
+            %span.g Meet Winners.
+          - if @username then
+            %span.alignright
+              %strong= @username
+              |
+              %a{:href => ""} My account
+              | #{link_to 'Sign out', session_path, :method => :delete}
+      #bd
+        #yui-main
+          .yui-b
+            .yui-g
+              .main_content
+                = yield
+        .yui-b.left-hand-menu
+          %p &nbsp;
+          %p.left-hand-menu_unread= link_to 'Missions', missions_path
+          %p.left-hand-menu_unread= link_to 'Goals', goals_path
+          %ul
+            - if @nav_goals then @nav_goals.each do |goal|
+            %li= link_to goal.title, goal
+            - end end

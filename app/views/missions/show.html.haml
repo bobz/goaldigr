@@ -1,0 +1,21 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @mission.title
+%p
+  %b Description:
+  = @mission.description
+%p
+  %b Goal:
+  = if(@mission.goal_id) then @mission.goal.title end
+%p
+  %b Acts:
+  = @mission.acts.count
+  - if !@mission.acts.count.zero?
+    %i
+      (last at:
+      \#{@mission.acts.last.updated_at.to_s(:rfc822)}
+      )
+= link_to 'Edit', edit_mission_path(@mission)
+|
+\#{link_to 'Back', missions_path}

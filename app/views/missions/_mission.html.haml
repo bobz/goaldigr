@@ -1,0 +1,17 @@
+%tr{:class => cycle('table_line_odd', 'table_line_even')}
+  %td
+  %td.list_description
+    %dl
+      %dt= link_to mission.title, mission
+      %dd= truncate(strip_tags(mission.description), :length => 800)
+  %td
+    = link_to '+', acts_path(:mission_id => mission), :method => :post
+    %br/
+    = link_to '-', mission.acts.last, :method => :delete
+  %td= mission.acts_day
+  %td= mission.acts_week
+  %td= mission.acts_month
+  %td= mission.acts.count
+  %td.list_actions
+    = link_to 'Edit', edit_mission_path(mission)
+    = link_to 'Destroy', mission, :confirm => 'Are you sure?', :method => :delete

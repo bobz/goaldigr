@@ -1,0 +1,25 @@
+#product_list
+  %br/
+  %table
+    %tr
+      %th Goal
+      %th Description
+      %th Acts
+      %th
+      %th
+      %th
+      %th
+      %th
+    - @goals.each do |goal|
+      %tr.table_line_goal
+        %td= link_to goal.title, goal
+        %td/
+        %td/
+        %td Day
+        %td Week
+        %td Month
+        %td Total
+        %td
+      = render(goal.missions)
+%br/
+= link_to 'New Mission', new_mission_path
