@@ -28,6 +28,15 @@
               =link_to 'Sign out', sign_out_path, :method => :delete
       #bd
         #yui-main
+          - if flash[:error].present?
+            #flash-error
+              %ul
+                - flash[:error].each do |e|
+                  %li= e
+          - if flash[:notice].present?
+            #flash-notice
+              %ul
+                %li= flash[:notice]
           .yui-b
             .yui-g
               .main_content
