@@ -24,7 +24,8 @@
               %strong= @username
               |
               %a{:href => ""} My account
-              | #{link_to 'Sign out', session_path, :method => :delete}
+              | 
+              =link_to 'Sign out', sign_out_path, :method => :delete
       #bd
         #yui-main
           .yui-b
