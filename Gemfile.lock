@@ -30,8 +30,11 @@ GEM
     activesupport (3.0.3)
     arel (2.0.6)
     builder (2.1.2)
-    clearance (0.9.1)
+    clearance (0.10.3.1)
+      diesel (~> 0.1.4)
       rails (~> 3.0.0)
+    diesel (0.1.4)
+      railties (~> 3.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     formtastic (1.2.2)
@@ -81,7 +84,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  clearance (~> 0.9)
+  clearance (~> 0.10.3.1)
   formtastic
   haml
   inherited_resources
