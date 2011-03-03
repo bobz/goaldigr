@@ -7,10 +7,10 @@ class ApplicationController < ActionController::Base
   before_filter :init
 
   def init
-    @nav_goals = ()
+    @nav_categories = ()
     @username = nil
     if (current_user)
-      @nav_goals = current_user.goals
+      @nav_categories = current_user.categories
       @username = current_user.email
     end
   end

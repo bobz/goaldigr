@@ -1,5 +1,5 @@
 class MissionsController < ApplicationController
   def index
-    @goals = current_user.goals.all
+    @categories = current_user.categories.all
   end
 end

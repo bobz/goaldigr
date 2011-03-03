@@ -6,8 +6,8 @@
   %b Description:
   = @mission.description
 %p
-  %b Goal:
-  = if(@mission.goal_id) then @mission.goal.title end
+  %b Category:
+  = if(@mission.category_id) then @mission.category.title end
 %p
   %b Acts:
   = @mission.acts.count

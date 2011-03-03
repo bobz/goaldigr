@@ -44,8 +44,8 @@
         .yui-b.left-hand-menu
           %p &nbsp;
           %p.left-hand-menu_unread= link_to 'Missions', missions_path
-          %p.left-hand-menu_unread= link_to 'Goals', goals_path
+          %p.left-hand-menu_unread= link_to 'Categoriess', categories_path
           %ul
-            - if @nav_goals 
-              - @nav_goals.each do |goal|
-                %li= link_to goal.title, goal
+            - if @nav_categories 
+              - @nav_categories.each do |category|
+                %li= link_to category.title, category

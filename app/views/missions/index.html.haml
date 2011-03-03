@@ -2,7 +2,7 @@
   %br/
   %table
     %tr
-      %th Goal
+      %th Category
       %th Description
       %th Acts
       %th
@@ -10,9 +10,9 @@
       %th
       %th
       %th
-    - @goals.each do |goal|
+    - @categories.each do |category|
       %tr.table_line_goal
-        %td= link_to goal.title, goal
+        %td= link_to category.title, category
         %td/
         %td/
         %td Day
@@ -20,6 +20,6 @@
         %td Month
         %td Total
         %td
-      = render(goal.missions)
+      = render(category.missions)
 %br/
 = link_to 'New Mission', new_mission_path

@@ -8,7 +8,7 @@ Goaldigr::Application.routes.draw do
 
   resources :missions
 
-  resources :goals
+  resources :categories
 
   root :to => "missions#index"
 

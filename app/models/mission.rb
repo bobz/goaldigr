@@ -1,6 +1,6 @@
 class Mission < ActiveRecord::Base
   has_many :acts, :dependent => :destroy
-  belongs_to :goal
+  belongs_to :category
 
   def acts_day
 	yesterday = Time.zone.now - 1.day
