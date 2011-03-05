@@ -5,7 +5,7 @@
       %dt= link_to mission.title, mission
       %dd= truncate(strip_tags(mission.description), :length => 800)
   %td
-    = link_to '+', acts_path(:mission_id => mission), :method => :post
+    = button_to_function '+', "missionActAdd(\"#{acts_path(:mission_id => mission.id)}\")"
     %br/
     = link_to '-', mission.acts.last, :method => :delete
   %td= mission.acts_day
